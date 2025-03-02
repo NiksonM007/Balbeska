@@ -53,7 +53,7 @@ h1 {
     transition: opacity 2s ease-in-out;
 }
 
-.heart {
+.hearts {
     position: absolute;
     bottom: -10px;
     width: 50px;
