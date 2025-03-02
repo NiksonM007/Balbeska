@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" href="photo/icon1.png">
+    <title>Balbeska❤️.com</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>Любимой балбеске от Никитоса</h1>
+    <img src="photo/Nikitos.png" alt="Моё фото для тебя" class="background-image" onclick="playMeowAndRedirect()">
+    <p>Жми на Никитоса</p>
+    <div class="hearts"></div>
+    <audio id="meowSound" src="sounds/audio_2025-03-01_09-52-26.ogg"></audio>
+    <script src="heart.js"></script>
+    <script>
+        function playMeowAndRedirect() {
+            var sound = document.getElementById('meowSound');
+            sound.play();
+            sound.onended = function() {
+                setTimeout(function() {
+                    window.location.href = 'secondpage.html';
+                }, 500);
+            };
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" href="photo/icon1.png">
+    <title>Balbeska❤️.com</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="imageContainer" class="image-container">
+        <img src="photo/buket.png" alt="Моё фото" class="popup-image">
+    </div>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="sounds/14_-my-heart-will-go-on-performed-by-celine-dion.mp3" type="audio/mp3">
+        Ваш браузер не поддерживает аудио.
+    </audio>
+    <script>
+        window.onload = function() {
+            const imageContainer = document.getElementById('imageContainer');
+            setTimeout(function() {
+                imageContainer.style.opacity = '1';
+            }, 500);
+        };
+    </script>
+</body>
+</html>

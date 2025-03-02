@@ -1,0 +1,61 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #551cf1, #9871f3);
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    padding: 10px;
+    -webkit-overflow-scrolling: touch;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6), -3px -3px 6px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+    padding: 20px;
+}
+
+.background-image {
+    cursor: pointer;
+    width: 70vw;
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.background-image:active {
+    transform: scale(0.95);
+}
+
+.flying-video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.popup-image {
+    width: 60vw;
+    max-width: 500px;
+    border-radius: 10px;
+    transition: opacity 2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .popup-image {
+        width: 80vw;
+    }
+}
+
