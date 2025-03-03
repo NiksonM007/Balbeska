@@ -5,24 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="icon" href="photo/icon1.png">
     <title>Balbeska❤️.com</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: radial-gradient(circle, #251af6, #8280ee);
+            text-align: center;
+            padding: 20px;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .background-image {
+            cursor: pointer;
+            width: 70vw;
+            max-width: 300px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .background-image:active {
+            transform: scale(0.95);
+        }
+        .back-link {
+            font-size: 1.6rem;
+            color: #f8f6f7;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #2857ce, #9699c7);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin-top: 20px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .back-link:hover {
+            background: linear-gradient(135deg, #ff5c8d, #ff9a9e);
+            transform: translateY(-5px);
+        }
+        .push {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+    </style>
 </head>
 <body>
-    <div class="hearts"></div>
-    <div id="imageContainer" class="image-container">
-        <img src="photo/buket.png" alt="Моё фото" class="popup-image">
-    </div>
-    <audio id="backgroundMusic" autoplay loop>
+    <img src="photo/buket.png" alt="Моё фото для тебя" class="background-image" id="photo">
+    <audio id="backgroundMusic" loop>
         <source src="sounds/14_-my-heart-will-go-on-performed-by-celine-dion.mp3" type="audio/mp3">
         Ваш браузер не поддерживает аудио.
     </audio>
+    <p class="push">Жми</p>
     <script>
-        window.onload = function() {
-            const imageContainer = document.getElementById('imageContainer');
-            setTimeout(function() {
-                imageContainer.style.opacity = '1';
-            }, 500);
-        };
+        document.getElementById('photo').addEventListener('click', function() {
+            var audio = document.getElementById('backgroundMusic');
+            audio.play();
+        });
     </script>
 </body>
 </html>
