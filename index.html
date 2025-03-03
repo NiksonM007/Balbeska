@@ -5,8 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="icon" href="photo/icon1.png">
     <title>Balbeska❤️.com</title>
-    <link rel="stylesheet" href="style.css">
     <style>
+        body {
+            background: radial-gradient(circle, #0320fa, #9998e3);
+            text-align: center;
+            padding: 20px;
+            font-family: 'Arial', sans-serif;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .background-image {
+            cursor: pointer;
+            width: 70vw;
+            max-width: 300px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .background-image:active {
+            transform: scale(0.95);
+        }
         .back-link {
             font-size: 1.6rem;
             color: #f8f6f7;
@@ -26,15 +47,10 @@
     </style>
 </head>
 <body>
-    <div id="imageContainer" class="image-container">
-        <img src="photo/buket.png" alt="Моё фото" class="popup-image" onclick="playMeowAndRedirect()">
-    </div>
-    <a href="index.html" class="back-link">Обратно к Никитосу</a>
+    <h1>Любимой от Никитоса</h1>
+    <img src="photo/Nikitos.png" alt="Моё фото для тебя" class="background-image" onclick="playMeowAndRedirect()">
+    <p onclick="playMeowAndRedirect()" style="cursor: pointer; color: #fff; font-size: 1.5rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.2);">Нажми на Никитоса</p>
     <audio id="meowSound" src="sounds/audio_2025-03-01_09-52-26.ogg"></audio>
-    <audio id="backgroundMusic" autoplay loop>
-        <source src="sounds/14_-my-heart-will-go-on-performed-by-celine-dion.mp3" type="audio/mp3">
-        Ваш браузер не поддерживает аудио.
-    </audio>
     <script>
         function playMeowAndRedirect() {
             var sound = document.getElementById('meowSound');
@@ -48,3 +64,5 @@
     </script>
 </body>
 </html>
+
+
