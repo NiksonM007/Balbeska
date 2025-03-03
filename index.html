@@ -7,21 +7,34 @@
     <title>Balbeska❤️.com</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            user-select: none;
-            overflow-x: hidden;
+        .back-link {
+            font-size: 1.6rem;
+            color: #f8f6f7;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #2857ce, #9699c7);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin-top: 20px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .back-link:hover {
+            background: linear-gradient(135deg, #ff5c8d, #ff9a9e);
+            transform: translateY(-5px);
         }
     </style>
 </head>
 <body>
-    <h1>Любимой балбеске от Никитоса</h1>
-    <img src="photo/Nikitos.png" alt="Моё фото для тебя" class="background-image" onclick="playMeowAndRedirect()">
-    <p>Жми на Никитоса</p>
-    <div class="hearts"></div>
+    <div id="imageContainer" class="image-container">
+        <img src="photo/buket.png" alt="Моё фото" class="popup-image" onclick="playMeowAndRedirect()">
+    </div>
+    <a href="index.html" class="back-link">Обратно к Никитосу</a>
     <audio id="meowSound" src="sounds/audio_2025-03-01_09-52-26.ogg"></audio>
-    <script src="heart.js"></script>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="sounds/14_-my-heart-will-go-on-performed-by-celine-dion.mp3" type="audio/mp3">
+        Ваш браузер не поддерживает аудио.
+    </audio>
     <script>
         function playMeowAndRedirect() {
             var sound = document.getElementById('meowSound');
